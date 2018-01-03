@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app="frontierApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>projectTemplate</title>
+  <!-- build:css css/main.css -->
+  <link rel="stylesheet" href="../assets/styles/main.css">
+  <!-- endbuild -->
+</head>
+<body ng-controller="RootController">
+<div ui-view></div>
+<!-- build:js scripts/vendor.js -->
+<script src="../../bower_components/jquery/dist/jquery.js"></script>
+<!-- endbuild -->
+
+<!-- build:js js/angular.js -->
+<script src="../../bower_components/angular/angular.js"></script>
+<script src="../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<!-- endbuild -->
+
+<!-- build:js js/app.js -->
+<script src="app.js"></script>
+<!-- endbuild -->
+
+<!-- build:js js/modules.js -->
+<script src="modules/sidebar/sidebar_router.js"></script>
+<script src="modules/sidebar/sidebar_controller.js"></script>
+<script src="modules/contribution/contribution_router.js"></script>
+<script src="modules/contribution/contribution_add_controller.js"></script>
+<script src="modules/contribution/contribution_edit_controller.js"></script>
+<script src="modules/contribution/contribution_directive.js"></script>
+<script src="modules/contribution/contribution_service.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>
