@@ -9,7 +9,6 @@ angular.module('frontierApp.sidebar', ['ui.router'])
         templateUrl: 'modules/sidebar/sidebar_view.html',
         controller: 'SidebarController'
       });
-  }])
-  .controller('SidebarController', ['$rootScope', '$scope', '$state', '$timeout', '$log', function ($rootScope, $scope, $state, $timeout, $log) {
   }]);
+
 

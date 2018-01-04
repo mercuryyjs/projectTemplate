@@ -1,0 +1,65 @@
+#sidebar {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  .sidebarTop {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    background: rgba(244, 247, 250, 1);
+  }
+  .sidebarLeftMenu {
+    width: 218px;
+    background: #262630;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    .manageleft-menu {
+      color: #e8eaea;
+      padding-top: 50px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      width: 250px;
+      height: 100%;
+    }
+    .manageleft-menu .menutit {
+      position: relative;
+      color: #E5E6E7;
+      display: block;
+      height: 50px;
+      line-height: 50px;
+      border-bottom: 1px solid #333333;
+      padding: 0 20px;
+      width: 100%;
+      background: #2F343F 100%;
+    }
+    .menuCon a {
+      display: block;
+      height: 38px;
+      line-height: 38px;
+      padding-left: 48px;
+      color: #E5E6E7;
+      background: #000717;
+    }
+    .menuCon a.active {
+      background: #ffffff;
+      color: #00BCD4;
+    }
+    .menutit.active {
+      color: #e8eaea;
+    }
+  }
+  .sidebarRightContent {
+    margin-left: 230px;
+    padding-top: 50px;
+    height: 100%;
+    overflow: auto;
+    padding-right: 15px;
+  }
+}
+
+
+

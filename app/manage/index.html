@@ -5,14 +5,22 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>projectTemplate</title>
-  <!-- build:css css/main.css -->
-  <link rel="stylesheet" href="../assets/styles/main.css">
+  <!-- build:css css/common.css -->
+  <link rel="stylesheet" href="../assets/styles/public.css">
+  <link rel="stylesheet" href="../assets/styles/bootstrap.css">
   <!-- endbuild -->
+
+  <!-- build:css css/common.css -->
+  <link rel="stylesheet" href="../assets/styles/sidebar.css">
+  <!-- endbuild -->
+
 </head>
 <body ng-controller="RootController">
-<div ui-view></div>
+<div ui-view class="entry"></div>
+
 <!-- build:js scripts/vendor.js -->
 <script src="../../bower_components/jquery/dist/jquery.js"></script>
+<script src="../assets/scripts/bootstrap/js/bootstrap.js"></script>
 <!-- endbuild -->
 
 <!-- build:js js/angular.js -->
@@ -25,13 +33,18 @@
 <!-- endbuild -->
 
 <!-- build:js js/modules.js -->
+<script src="../components/directive/formUnitInput.js"></script>
+<script src="../components/directive/formUnitSelect.js"></script>
+<!-- endbuild -->
+
+<!-- build:js js/modules.js -->
 <script src="modules/sidebar/sidebar_router.js"></script>
 <script src="modules/sidebar/sidebar_controller.js"></script>
-<script src="modules/contribution/contribution_router.js"></script>
-<script src="modules/contribution/contribution_add_controller.js"></script>
-<script src="modules/contribution/contribution_edit_controller.js"></script>
-<script src="modules/contribution/contribution_directive.js"></script>
-<script src="modules/contribution/contribution_service.js"></script>
+<script src="modules/demo/demo_router.js"></script>
+<script src="modules/demo/demo_add_controller.js"></script>
+<script src="modules/demo/demo_edit_controller.js"></script>
+<script src="modules/demo/demo_directive.js"></script>
+<script src="modules/demo/demo_service.js"></script>
 <!-- endbuild -->
 
 </body>

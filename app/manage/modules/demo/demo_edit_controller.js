@@ -1,6 +1,6 @@
 /**
  * Created by Yjs on 2018/1/2.
  */
-angular.module('frontierApp.contribution')
+angular.module('frontierApp.demo')
   .controller('ContributionEditController', ['$rootScope', '$scope', '$log', function ($rootScope, $scope, $log) {
   }]);

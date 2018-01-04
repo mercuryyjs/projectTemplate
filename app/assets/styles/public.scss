@@ -1,0 +1,137 @@
+/*frame and layout*/
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  .entry {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+  }
+}
+
+/* common component*/
+
+::-ms-clear {
+  display: none;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #999;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #999;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #999;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #999999 !important;
+}
+
+//form-unit
+$formUnitWidth: 200px;
+$formUnitHeight: 26px;
+$formUnitLabelWidth: 60px;
+$formUnitLabelTextAlign: left;
+@mixin formUnitContentInner {
+  font-size: inherit;
+  padding: 0 0 0 15px;
+  display: inline-block;
+  width: 100%;
+  outline: none;
+  border-radius: 2px;
+  height: 100%;
+  border-width: 0;
+  background: transparent;
+  text-align: left;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.form-unit {
+  width: $formUnitWidth;
+  height: $formUnitHeight;
+  float: left;
+  font: {
+    size: 12px;
+  }
+  label {
+    float: left;
+    width: $formUnitLabelWidth;
+    line-height: $formUnitHeight;
+    text-align: $formUnitLabelTextAlign;
+  }
+  .form-unit-content {
+    margin-left: $formUnitLabelWidth;
+    border: 1px solid #A3B2CD;
+    height: inherit;
+    .form-select, .form-select .dropdown {
+      width: 100%;
+      height: 100%;
+      border-width: 0;
+    }
+    input, button {
+      @include formUnitContentInner;
+    }
+    button{
+      position:relative;
+      padding-right:22px;
+    }
+    .selectArrow {
+      position:absolute;
+      right:0;
+      top:50%;
+      margin-top:-3px;
+      margin-right: 10px;
+      color: rgb(206, 217, 237);
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 2px;
+      vertical-align: middle;
+      border-top: 6px dashed;
+      border-top: 6px solid \9;
+      border-right: 6px solid transparent;
+      border-left: 6px solid transparent;
+      border-bottom:0;
+      border-bottom:0\9;
+    }
+    .open .selectArrow{
+      border-top: 0;
+      border-top: 0\9;
+      border-bottom: 6px dashed;
+      border-bottom: 6px solid \9;
+    }
+    .dropdown-menu {
+      width: 100%;
+      overflow: auto;
+      min-width: unset;
+    }
+    .dropdown-menu li {
+      width: 100%;
+      padding:0 15px;
+      height: 26px;
+      line-height: 26px;
+      cursor: pointer;
+      overflow:hidden;
+      text-overflow: ellipsis;
+      white-space:nowrap;
+    }
+    .dropdown-menu li.selected {
+      background: #c2f3f9;
+    }
+    .selectedDefault {
+      color: #999;
+    }
+  }
+}
+

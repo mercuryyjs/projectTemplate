@@ -4,15 +4,12 @@
 'use strict';
 angular.module('frontierApp', [
   'frontierApp.sidebar',
-  'frontierApp.contribution'
+  'frontierApp.demo'
 ])
   .config(['$urlRouterProvider', '$httpProvider', '$logProvider', function ($urlRouterProvider, $httpProvider, $logProvider) {
-    // $httpProvider.defaults.headers.common = {};
     $httpProvider.defaults.headers.post['Content-Type'] = 'application/json';
-    // $httpProvider.defaults.headers.put = {};
-    // $httpProvider.defaults.headers.patch = {};
     $httpProvider.defaults.withCredentials = true;
-    $urlRouterProvider.otherwise('/sidebar/contributionAdd');
+    $urlRouterProvider.otherwise('/sidebar/demoAdd');
     $logProvider.debugEnabled(false);
   }])
   .controller('RootController', ['$rootScope', '$scope', '$timeout', '$location', '$state','$log', function ($rootScope, $scope, $timeout, $location,$state,$log) {

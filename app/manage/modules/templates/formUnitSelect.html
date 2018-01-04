@@ -1,0 +1,16 @@
+<div class="form-unit">
+  <label>{{label}}</label>
+  <div class="form-unit-content">
+    <div class="form-select">
+      <div class="dropdown">
+        <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span ng-class="{selectedDefault:selectedModal.id === null}">{{selectedModal.name}}</span>
+          <span class="selectArrow"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dLabel">
+          <li ng-click="selectItem(item)" ng-class="{selected:item.selected}" ng-repeat="item in dropdown track by $index">{{item.name}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

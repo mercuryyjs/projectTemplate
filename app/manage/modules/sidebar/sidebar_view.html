@@ -1,11 +1,15 @@
-<div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active">
-      <a href="javascript:void(0)" ui-sref="sidebar.contributionAdd">新增</a>
-    </li>
-    <li>
-      <a href="javascript:void(0)" ui-sref="sidebar.contributionEdit">编辑</a>
-    </li>
-  </ul>
+<div id="sidebar">
+  <div class="sidebarTop"></div>
+  <div class="sidebarLeftMenu">
+    <div class="manageleft-menu">
+      <a class="menutit">用户管理</a>
+      <div  ng-class="{active:state.current.name.match('demo')}" class="menuCon" >
+        <a ng-class="{active:state.current.name.match('demoAdd')}" ui-sref="sidebar.demoAdd">新增</a>
+        <a ng-class="{active:state.current.name.match('demoEdit')}" ui-sref="sidebar.demoEdit">编辑</a>
+      </div>
+    </div>
+  </div>
+  <div class="sidebarRightContent">
+    <div ui-view="main"></div>
+  </div>
 </div>
-<div ui-view="main"></div>
