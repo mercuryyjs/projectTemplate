@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*frame and layout*/
 html {
   width: 100%;
@@ -55,6 +56,8 @@ body .entry {
   margin-left: 60px;
   border: 1px solid #A3B2CD;
   height: inherit;
+  /*下拉*/
+  /*时间控件*/
 }
 .form-unit .form-unit-content .form-select, .form-unit .form-unit-content .form-select .dropdown {
   width: 100%;
@@ -70,7 +73,7 @@ body .entry {
   border-radius: 2px;
   height: 100%;
   border-width: 0;
-  background: transparent;
+  background-color: transparent;
   text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -125,6 +128,39 @@ body .entry {
 }
 .form-unit .form-unit-content .selectedDefault {
   color: #999;
+}
+.form-unit .form-unit-content .form-unit-datetimepicker {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.form-unit .form-unit-content .form-unit-datetimepicker .dropdown-toggle {
+  display: inline-block;
+  height: 100%;
+}
+.form-unit .form-unit-content .form-unit-datetimepicker .dropdown-toggle .input-group {
+  height: 100%;
+}
+.form-unit .form-unit-content .form-unit-datetimepicker .dropdown-menu {
+  width: auto;
+}
+.form-unit .form-unit-content .form-unit-datetimepicker .input-group-addon {
+  width: auto;
+  height: 100%;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+.form-unit .formUnitDateTimeStartEnd input {
+  width: 42%;
+  padding: 0;
+  text-align: center;
+  border-width: 0;
+}
+.form-unit .formUnitDateTimeStartEnd span {
+  display: inline-block;
+  width: 10%;
+  padding: 0;
 }
 
 /*# sourceMappingURL=public.css.map */

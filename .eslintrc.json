@@ -10,6 +10,8 @@
           "MethodDefinition": false,
           "ClassDeclaration": false
         }
-      }]
+      }],
+      "no-alert": 2
+
     }
 }

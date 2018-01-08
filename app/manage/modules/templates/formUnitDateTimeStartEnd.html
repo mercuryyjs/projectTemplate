@@ -1,0 +1,8 @@
+<div class="form-unit">
+  <label>{{label}}</label>
+  <div class="form-unit-content formUnitDateTimeStartEnd">
+    <input type="text" date-picker class="laydate-icon" id="{{startId}}" ng-model="inputStartModel" max-date="{{inputEndModel}}" placeholder="{{startPlaceholder}}"/>
+    <span>至</span>
+    <input type="text" date-picker class="laydate-icon" id="{{endId}}" ng-model="inputEndModel" min-date="{{inputStartModel}}" placeholder="{{endPlaceholder}}"/>
+  </div>
+</div>

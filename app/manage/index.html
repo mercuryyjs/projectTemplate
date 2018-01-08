@@ -10,6 +10,11 @@
   <link rel="stylesheet" href="../assets/styles/bootstrap.css">
   <!-- endbuild -->
 
+  <!-- build:css css/css-plugins.css -->
+  <!--<link rel="stylesheet" href="../../bower_components/angular-bootstrap-datetimepicker/src/css/datetimepicker.css">-->
+  <link rel="stylesheet" href="../assets/scripts/laydate/need/laydate.css">
+  <!-- endbuild -->
+
   <!-- build:css css/common.css -->
   <link rel="stylesheet" href="../assets/styles/sidebar.css">
   <!-- endbuild -->
@@ -21,20 +26,32 @@
 <!-- build:js scripts/vendor.js -->
 <script src="../../bower_components/jquery/dist/jquery.js"></script>
 <script src="../assets/scripts/bootstrap/js/bootstrap.js"></script>
+<script src="../../bower_components/moment/moment.js"></script>
 <!-- endbuild -->
+
+<script src="../assets/scripts/laydate/laydate.js"></script>
 
 <!-- build:js js/angular.js -->
 <script src="../../bower_components/angular/angular.js"></script>
 <script src="../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <!-- endbuild -->
 
+<!-- build:js js/angular-plugins.js -->
+<script type="text/javascript" src="../../bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
+<script type="text/javascript" src="../../bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"></script>
+<!-- endbuild -->
+
 <!-- build:js js/app.js -->
 <script src="app.js"></script>
 <!-- endbuild -->
 
-<!-- build:js js/modules.js -->
+<!-- build:js js/components.js -->
+<script src="../components/filter/trustHtml.js"></script>
 <script src="../components/directive/formUnitInput.js"></script>
 <script src="../components/directive/formUnitSelect.js"></script>
+<script src="../components/directive/datePicker/datePicker.js"></script>
+<script src="../components/directive/formUnitDateTimePicker.js"></script>
+<script src="../components/directive/formUnitDateTimeStartEnd.js"></script>
 <!-- endbuild -->
 
 <!-- build:js js/modules.js -->

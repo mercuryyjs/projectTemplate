@@ -8,7 +8,7 @@ angular.module('frontierApp')
       scope: {
         label: '@',
         placeholder: '@',
-        inputModal: '='
+        inputModel: '='
       },
       templateUrl: '../manage/modules/templates/formUnitInput.html'
     };

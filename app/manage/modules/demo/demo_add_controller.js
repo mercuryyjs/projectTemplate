@@ -9,6 +9,7 @@ angular.module('frontierApp.demo')
       console.log($scope.company1);
       console.log($scope.company2);
       console.log($scope.company3);
+      console.log($scope.date);
     };
     $scope.company1 = {};
     $scope.company2 = {};
@@ -45,4 +46,6 @@ angular.module('frontierApp.demo')
       $scope.company3 = {};
       $scope.company4 = {};
     };
+    $scope.date = new Date();
+    $scope.date2 = new Date();
   }]);

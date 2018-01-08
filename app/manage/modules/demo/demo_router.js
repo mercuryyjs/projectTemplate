@@ -2,7 +2,7 @@
  * Created by Yjs on 2018/1/2.
  */
 'use strict';
-angular.module('frontierApp.demo', ['ui.router'])
+angular.module('frontierApp.demo', ['ui.router','ui.bootstrap.datetimepicker'])
   .config(['$stateProvider', function ($stateProvider) {
     $stateProvider
       .state('sidebar.demoAdd', {// 产品分类管理

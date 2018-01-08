@@ -6,10 +6,11 @@ angular.module('frontierApp')
     return {
       restrict: 'E',
       scope: {
+        ngId: '@',
         label: '@',
         type: '@', // 1-全部；2，-请选择
         dropdown: '=',
-        selectedModal: '='
+        selectedModel: '='
       },
       templateUrl: '../manage/modules/templates/formUnitSelect.html',
       replace: true,
@@ -26,18 +27,18 @@ angular.module('frontierApp')
               id: null
             });
           }
-          if (!($scope.selectedModal instanceof Object)) {
-            $scope.selectedModal = {};
+          if (!($scope.selectedModel instanceof Object)) {
+            $scope.selectedModel = {};
           }
-          if (!$scope.selectedModal.hasOwnProperty('id') || $scope.selectedModal.id === null) { // 新建的情况
+          if (!$scope.selectedModel.hasOwnProperty('id') || $scope.selectedModel.id === null) { // 新建的情况
             if (parseInt($scope.type) === 1) {
-              $scope.selectedModal = {name: '全部', id: null};
+              $scope.selectedModel = {name: '全部', id: null};
             } else {
-              $scope.selectedModal = {name: '请选择', id: null};
+              $scope.selectedModel = {name: '请选择', id: null};
             }
           } else { // 编辑
             for (var key in $scope.dropdown) {
-              if ($scope.dropdown[key].id === $scope.selectedModal.id) {
+              if ($scope.dropdown[key].id === $scope.selectedModel.id) {
                 $scope.dropdown[key].selected = true;
                 break;
               }
@@ -45,20 +46,20 @@ angular.module('frontierApp')
           }
         } else {
           $scope.dropdown = [];
-          $scope.selectedModal = {name: '请选择', id: null};
+          $scope.selectedModel = {name: '请选择', id: null};
         }
 
         // 搜索重置
-        $scope.$watch('selectedModal.id', function (newValue, oldValue) {
-          if (typeof $scope.selectedModal.id === 'undefined') {
+        $scope.$watch('selectedModel.id', function (newValue, oldValue) {
+          if (typeof $scope.selectedModel.id === 'undefined') {
             if (parseInt($scope.type) === 1) {
-              $scope.selectedModal = {name: '全部', id: null};
+              $scope.selectedModel = {name: '全部', id: null};
             } else {
-              $scope.selectedModal = {name: '请选择', id: null};
+              $scope.selectedModel = {name: '请选择', id: null};
             }
           }
           for (var key in $scope.dropdown) {
-            if ($scope.dropdown[key].id === $scope.selectedModal.id) {
+            if ($scope.dropdown[key].id === $scope.selectedModel.id) {
               $scope.dropdown[key].selected = true;
             } else {
               $scope.dropdown[key].selected = false;
@@ -66,7 +67,7 @@ angular.module('frontierApp')
           }
         });
         $scope.selectItem = function (item) {
-          $scope.selectedModal = item;
+          $scope.selectedModel = item;
         };
       }]
     };
