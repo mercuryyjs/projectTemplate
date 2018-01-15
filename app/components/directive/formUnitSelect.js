@@ -31,6 +31,9 @@ angular.module('frontierApp')
           } else {
             throw new Error('dropdown must be an array!');
           }
+          if (typeof $scope.selectedModel === 'number') {
+            $scope.selectedModel = $scope.selectedModel + '';
+          }
           if (typeof $scope.selectedModel === 'string') {
             if ($scope.selectedModel === '') { //新建
               $scope.selectedModel = null;

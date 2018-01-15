@@ -9,15 +9,13 @@ angular.module('frontierApp.demo')
       console.log($scope.company1);
       console.log($scope.company2);
       console.log($scope.company3);
+      console.log($scope.company4);
       console.log($scope.date);
-      console.log($scope.company5);
     };
-    $scope.company1 = {};
-    $scope.company2 = {};
-    $scope.company3 = {};
-    $scope.company4 = {name: '苏州分公司', id: 3};
-    // $scope.company5 = [{name: '集团公司', id: 1}];
-    // $scope.company5 = [];
+    $scope.company1 = 1;
+    $scope.company2 = 2;
+    $scope.company3 = 1;
+    $scope.company4 = 2;
     $scope.companyList1 = [
       {name: '移动集团移动集团移动集团', id: 1},
       {name: '北京分公司', id: 2},
@@ -48,13 +46,13 @@ angular.module('frontierApp.demo')
       {name: '苏州分公司', id: 3},
       {name: '上海分公司', id: 4}
     ];
-    $scope.company5 = null;
     $scope.reset = function () {
       $scope.title = '';
-      $scope.company1 = {};
-      $scope.company2 = {};
-      $scope.company3 = {};
-      $scope.company4 = {};
+      $scope.company1 = null;
+      $scope.company2 = null;
+      $scope.company3 = null;
+      $scope.company4 = null;
+      $scope.company5 = null;
     };
     $scope.date = new Date();
     $scope.date2 = new Date();

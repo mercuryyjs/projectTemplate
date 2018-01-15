@@ -15,6 +15,9 @@ angular.module('frontierApp')
       if (input === null || typeof input === 'undefined') {
         return '请选择';
       } else {
+        if (typeof input === 'number') {
+          input = input + '';
+        }
         var inputArray = input.split(',');
         for (var i = 0; i < inputArray.length; i++) {
           for (var j = 0; j < dropdown.length; j++) {
@@ -53,6 +56,9 @@ angular.module('frontierApp')
               $scope.dropdown.unshift({name: '请选择', id: null});
             }
             $scope.dropdownCopy = angular.copy($scope.dropdown);
+          }
+          if (typeof $scope.selectedModel === 'number') {
+            $scope.selectedModel = $scope.selectedModel + '';
           }
           if (typeof $scope.selectedModel === 'string') {
             if ($scope.selectedModel === '') { // 新建
