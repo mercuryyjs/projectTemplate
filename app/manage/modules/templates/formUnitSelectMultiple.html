@@ -4,7 +4,7 @@
     <div class="form-select">
       <div class="dropdown">
         <button id="{{ngId}}" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span ng-class="{selectedDefault:selectedModel === undefined || selectedModel === null}">{{selectedModel | selectMultipleResult:dropdown}}</span>
+          <span ng-class="{selectedDefault:selectedModel === undefined || selectedModel === null}">{{selectedModel | selectResult:dropdown}}</span>
           <span class="selectArrow"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="{{ngId}}">

@@ -6,7 +6,7 @@
  * type:下拉选项中是否增加“请选择”选项，0-添加（非必选）和不设置type或其他-（不添加）必选
  */
 angular.module('frontierApp')
-  .filter('selectMultipleResult', [function () {
+  .filter('selectResult', [function () {
     return function (input, dropdown) {
       if (!angular.isArray(dropdown)) {
         throw new Error('dropdown must be an array!');

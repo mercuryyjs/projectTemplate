@@ -4,11 +4,11 @@
     <div class="form-select">
       <div class="dropdown">
         <button id="{{ngId}}" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span ng-class="{selectedDefault:selectedModel.id === null}">{{selectedModel.name}}</span>
+          <span ng-class="{selectedDefault:selectedModel === undefined || selectedModel === null}">{{selectedModel | selectResult:dropdown}}</span>
           <span class="selectArrow"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="{{ngId}}">
-          <li ng-click="selectItem(item)" ng-class="{selected:item.selected}" ng-repeat="item in dropdown track by $index">{{item.name}}</li>
+          <li ng-click="selectItem($event,item)" ng-class="{selected:item.selected}" ng-repeat="item in dropdown track by $index">{{item.name}}</li>
         </ul>
       </div>
     </div>
