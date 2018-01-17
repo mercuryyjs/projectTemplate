@@ -41,7 +41,7 @@ body .entry {
 }
 
 .form-unit {
-  width: 200px;
+  width: 300px;
   height: 26px;
   float: left;
   font-size: 12px;
@@ -153,7 +153,7 @@ body .entry {
 }
 .form-unit .formUnitDateTimeStartEnd input {
   width: 42%;
-  padding: 0;
+  padding: 0 30px 0 0;
   text-align: center;
   border-width: 0;
 }

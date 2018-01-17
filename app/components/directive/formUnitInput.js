@@ -10,6 +10,11 @@ angular.module('frontierApp')
         placeholder: '@',
         inputModel: '='
       },
-      templateUrl: '../manage/modules/templates/formUnitInput.html'
+      templateUrl: '../manage/modules/templates/formUnitInput.html',
+      controller: ['$scope', function ($scope) {
+        if (typeof $scope.inputModel === 'undefined' || $scope.inputModel === null) {
+          $scope.inputModel = '';
+        }
+      }]
     };
   }]);

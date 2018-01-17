@@ -34,7 +34,7 @@ angular.module('frontierApp')
         ngModel: '=',
         maxDate: '@',
         minDate: '@',
-        fomt: '=fomt'
+        fomt: '='
       },
       link: function (scope, element, attr, ngModel) {
         console.log(ngModel);
@@ -47,7 +47,7 @@ angular.module('frontierApp')
           issure: true,//是否显示确认
           fixed: true,//是否固定在可视区域
           istoday: false,//是否显示今天
-          icon: false,
+          icon: true,
         };
         element.addClass('laydate-icon');   //默认有laydate-icon图标
         if (scope.fomt != undefined) {
